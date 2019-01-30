@@ -1,6 +1,9 @@
 #ifndef SPRITE_H
 #define SPRITE_H
 #include "Point.hpp"
+#include "Timer.hpp"
+
+
 
 class Sprite
 {
@@ -10,6 +13,10 @@ public:
 
 	float xSpeed;
 	float ySpeed;
+	bool canBeAffected = true;
+    //Timer invincibilityTimer;
+
+
 	void setPosition(float x, float y);
 
 	float getX();
@@ -21,6 +28,10 @@ public:
 	float getXSpeed();
 
 	float getYSpeed();
+
+	void setInvincibility();
+	
+	void setIt(bool yah);
 
 };
 

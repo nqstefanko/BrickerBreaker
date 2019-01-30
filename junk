@@ -1,0 +1,10 @@
+junk
+if (sf::Mouse::isButtonPressed(sf::Mouse::Left))
+        {  // sf::Vector2i position = sf::Mouse::getPositionA();
+            // std::cout << "BALLX: " << position.x << " BALLY: " << position.y << std::endl;
+            // //std::cout << "BALLX: " << b.getX() << " BALLY: " << b.getY() << std::endl;
+            // std::cout << "BALLCENTER: " << b.getCenter().first << " BALLCENTER2: " << b.getCenter().second << std::endl;
+            // //std::cout << "PADDLEX: " << p.getX() << " PADDDLE: " << p.getY() << std::endl;            
+            std::cout << "Angle to Corner of Paddle " << p.getAngleFromCenterToCorner() << std::endl;
+            std::cout << "Angle to Cetner of Ball " << std::abs(p.getAngleFromCenterOfBall(b)) << std::endl;
+        }

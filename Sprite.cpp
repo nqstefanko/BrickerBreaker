@@ -1,5 +1,12 @@
 #include "Sprite.hpp"
+#include "Timer.cpp"
+
 #include <iostream>
+#include <chrono>
+#include <iostream>
+#include <future>
+#include <thread>
+
 
 void Sprite::setPosition(float x, float y) {
 	position.setX(x);
@@ -26,16 +33,30 @@ float Sprite::getYSpeed()
 	return ySpeed;
 }
 
+// void Sprite::setInvincibility() {
+// 	canBeAffected = false;
+// 	bool * s = &canBeAffected;
+//     invincibilityTimer.start(chrono::milliseconds(100), [](bool * s){
+//        	*s = true
+//     });
+
+//     this_thread::sleep_for(chrono::milliseconds(250));
+//     invincibilityTimer.stop();	
+//     canBeAffected  = true;
+// }
+
 void Sprite::setSpeed(float newX, float newY, bool changeX = true, bool changeY = true)
 {
-	if(changeX)
-	{
-		xSpeed = newX;
-	}
-	
-	if(changeY)
-	{
-		ySpeed = newY;
+	if(canBeAffected) {
+		if(changeX)
+		{
+			xSpeed = newX;
+		}
+		
+		if(changeY)
+		{
+			ySpeed = newY;
+		}
 	}
 }
 

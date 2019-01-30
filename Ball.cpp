@@ -9,6 +9,8 @@ Ball::Ball(int r, float x, float y, float xS, float yS)
 	ballShape.setRadius(r);
 	
 	setPosition(x, y);
+	ballShape.setPosition(x, y);
+
 
 	xSpeed = xS;
 	ySpeed = yS;
